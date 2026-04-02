@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-              git 'https://github.com/ashokitschool/maven-web-app.git'
+              git 'https://https://'github.com/Arunasri-0096/git-to-sonar.git'
             }
         }
         stage('build'){
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('docker image'){
             steps {
-                sh 'docker build -t ashokit/mavenwebapp .'
+                sh 'docker build -t arunasri0096/end .'
             }
         }
         stage('k8s deploy'){
