@@ -7,6 +7,8 @@
   <version>3.0-RELEASE</version>
   <name>01-maven-web-app</name>
   <url>http://maven.apache.org</url>
+  <!-- ✅ IMPORTANT for Nexus -->
+    <version>1.0</version>
  
   <dependencies>
     <dependency>
@@ -26,4 +28,19 @@
       </plugin>
     </plugins>
   </build>
+  <!-- ✅ FIXED NEXUS CONFIG -->
+    <distributionManagement>
+
+        <repository>
+            <id>maven-releases</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+
+    </distributionManagement>
+
 </project>
