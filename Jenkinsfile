@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-              git 'https://https://'github.com/Arunasri-0096/git-to-sonar.git'
+              git branch: 'main', url: 'https://github.com/Arunasri-0096/database-engine.git'
             }
         }
         stage('build'){
